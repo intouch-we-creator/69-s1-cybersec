@@ -3,4 +3,4 @@
 ## My Information 
 - Intouch Wenanont
 - 056960405xxx-3
-- ความคาดหวังคือเข้าใจระบบรักษาความปลอดภัยทางไซเบอร์ อยากเรียนรู้ทักษะวิชานี้ให้มากขึ้นซึ่งสามารถนำไปใช้ในการทำงานตามหน่วยงานที่กำลังทำอยู่ได้
+- I expect to deepen my understanding of cybersecurity systems and expand my practical skills, enabling me to actively strengthen the security posture of the organizations I work with
