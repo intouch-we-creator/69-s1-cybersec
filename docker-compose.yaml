@@ -4,7 +4,7 @@ services:
     container_name: 69-s1-db
     ports:
       - 54327:5432
-    environments: 
+    environment: 
       - POSTGRES_PASSWORD=42236590
       - POSTGRES_USER=intouch
       - POSTGRES_DB=intouch
