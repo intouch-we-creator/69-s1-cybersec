@@ -12,6 +12,7 @@ services:
       - C:\Users\User/var/lib/postgresql/data
 
   admin:
+    image: dpage/pgadmin4
     container_name: 69-s1-admin
     ports:
       - 8081:80
