@@ -19,3 +19,5 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=temza2018@gmail.com
       - PGADMIN_DEFAULT_PASSWORD=ddfg42236590
+    volumes :
+      - /data-admin:/var/lib/pgadmin
