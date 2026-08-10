@@ -1,9 +1,9 @@
 services:
-  db:
+  69-s1-db:
     image: postgres:16-alpine
     container_name: 69-s1-db
     ports:
-      - 54327:5432
+      - "54327:5432"
     environment: 
       - POSTGRES_PASSWORD=42236590
       - POSTGRES_USER=intouch
@@ -11,13 +11,29 @@ services:
     volumes:
       - C:\Users\User/var/lib/postgresql/data
 
-  admin:
+  69-s1-admin:
     image: dpage/pgadmin4
     container_name: 69-s1-admin
     ports:
-      - 8081:80
+      - "8081:80"
     environment:
       - PGADMIN_DEFAULT_EMAIL=temza2018@gmail.com
       - PGADMIN_DEFAULT_PASSWORD=ddfg42236590
     volumes :
       - ./data-pgadmin:/var/lib/pgadmin/data
+
+    69-s1-app:
+      image: prawee/strapi
+      container_name: 69-s1-app
+      ports:
+        - "9092:1337" 
+    environment:
+        DATABASE_CLIENT: postgres
+        DATABASE_HOST: 69-s1-db
+        DATABASE_PORT: 5432
+        DATABASE_NAME: intouch
+        DATABASE_USERNAME: intouch
+        DATABASE_PASSWORD: 42236590
+      depends_on:
+        - 69-s1-db
+      
