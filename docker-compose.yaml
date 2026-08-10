@@ -36,6 +36,3 @@ services:
       DATABASE_PASSWORD: 42236590
     depends_on:
       - 69-s1-db
-
-volumes:
-  db_data:
