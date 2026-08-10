@@ -9,7 +9,7 @@ services:
       - POSTGRES_USER=intouch
       - POSTGRES_DB=intouch
     volumes:
-      - /var/lib/postgresql/data
+      - ./db_data:/var/lib/postgresql/data
 
   69-s1-admin:
     image: dpage/pgadmin4
