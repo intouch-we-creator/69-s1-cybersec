@@ -8,8 +8,6 @@ services:
       - POSTGRES_PASSWORD=42236590
       - POSTGRES_USER=intouch
       - POSTGRES_DB=intouch
-    volumes:
-      - db_data:/var/lib/postgresql/data
 
   69-s1-admin:
     image: dpage/pgadmin4
