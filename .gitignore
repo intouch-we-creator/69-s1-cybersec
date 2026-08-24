@@ -1,2 +1,4 @@
-.DS_Store
 data/
+docker
+pgadmin/
+.env
