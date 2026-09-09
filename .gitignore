@@ -1,3 +1,6 @@
-data/
-docker
-pgadmin/
+.env
+node_modules/
+data-postgres/
+.tmp/
+.cache/
+build/

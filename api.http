@@ -1,0 +1,40 @@
+##api
+
+
+##Signup
+GET http://localhost:9092/admin/auth/register-admin
+content-type: application/json
+
+{
+  "firstName": "intouch",
+  "lastName": "wenanont",
+  "email": "temza2018@gmail.com",
+  "password": "DDfg42236590",
+  "confirmPassword": "DDfg42236590"
+}
+###                                     
+
+##login
+POST http://localhost:9092/admin/login
+content-type: application/json
+
+{
+  "email": "temza2018@gmail.com",
+  "password": "DDfg42236590",
+  "rememberMe": true
+}
+###
+
+##profile
+GET http://localhost:9092/admin/me
+Authorization: 
+###
+
+##forgot
+GET http://localhost:9092/admin/auth/forgot-password
+content-type: application/json
+
+{
+  "email": "temza2018@gmail.com"
+}
+###
