@@ -1,9 +1,11 @@
 # API
 
+@baseUrl = http://127.0.0.1:9092
+
 ## 1. Admin
 
-### 1.1 Login
-POST http://localhost:9092/admin/login
+### 1.1 Admin Login
+POST {{baseUrl}}/admin/login
 Content-Type: application/json
 
 {
@@ -12,8 +14,8 @@ Content-Type: application/json
     "rememberMe": {{$dotenv ADMIN_REMEMBER_ME}}
 }
 
-### 1.2 Register / Signup
-POST http://localhost:9092/admin/register-admin
+### 1.2 Admin Signup
+POST {{baseUrl}}/admin/register-admin
 Content-Type: application/json
 
 {
@@ -23,16 +25,16 @@ Content-Type: application/json
     "lastname": "{{$dotenv ADMIN_REGISTER_LASTNAME}}"
 }
 
-### 1.3 Forgot
-POST http://localhost:9092/admin/forgot-password
+### 1.3 Admin Forgot Password
+POST {{baseUrl}}/admin/forgot-password
 Content-Type: application/json
 
 {
     "email": "{{$dotenv ADMIN_FORGOT_EMAIL}}"
 }
 
-### 1.3.1 Reset Password
-POST http://localhost:9092/admin/reset-password
+### 1.3.1 Admin Reset Password
+POST {{baseUrl}}/admin/reset-password
 Content-Type: application/json
 
 {
@@ -40,15 +42,15 @@ Content-Type: application/json
     "password": "{{$dotenv ADMIN_RESET_PASSWORD}}"
 }
 
-### 1.4 Profile
-GET http://localhost:9092/admin/users/me
+### 1.4 Admin Profile
+GET {{baseUrl}}/admin/users/me
 Authorization: Bearer {{$dotenv ADMIN_PROFILE_TOKEN}}
 
 
 ## 2. User
 
-### 2.1 Login
-POST http://localhost:9092/api/auth/local
+### 2.1 User Login
+POST {{baseUrl}}/api/auth/local
 Content-Type: application/json
 
 {
@@ -56,8 +58,8 @@ Content-Type: application/json
     "password": "{{$dotenv USER_LOGIN_PASSWORD}}"
 }
 
-### 2.2 Register / Signup
-POST http://localhost:9092/api/auth/local/register
+### 2.2 User Signup
+POST {{baseUrl}}/api/auth/local/register
 Content-Type: application/json
 
 {
@@ -66,16 +68,16 @@ Content-Type: application/json
     "password": "{{$dotenv USER_REGISTER_PASSWORD}}"
 }
 
-### 2.3 Forgot
-POST http://localhost:9092/api/auth/forgot-password
+### 2.3 User Forgot Password
+POST {{baseUrl}}/api/auth/forgot-password
 Content-Type: application/json
 
 {
     "email": "{{$dotenv USER_FORGOT_EMAIL}}"
 }
 
-### 2.3.1 Reset Password
-POST http://localhost:9092/api/auth/reset-password
+### 2.3.1 User Reset Password
+POST {{baseUrl}}/api/auth/reset-password
 Content-Type: application/json
 
 {
@@ -84,6 +86,6 @@ Content-Type: application/json
     "passwordConfirmation": "{{$dotenv USER_RESET_PASSWORD_CONFIRMATION}}"
 }
 
-### 2.4 Profile
-GET http://localhost:9092/api/users/me
+### 2.4 User Profile
+GET {{baseUrl}}/api/users/me
 Authorization: Bearer {{$dotenv USER_PROFILE_TOKEN}}
