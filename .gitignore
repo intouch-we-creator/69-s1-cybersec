@@ -1,5 +1,7 @@
 data/
 docker
+data-postgres/
 pgadmin/
-.env
+.env*
+!.env.simple
 api.http
